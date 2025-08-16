@@ -1,0 +1,94 @@
+kgpimg() {
+    local strip_ecr=false
+    local label_name="app"
+    local skip_containers=""
+    
+    # Parse options
+    while [[ $1 == -* ]]; do
+        case $1 in
+            --strip-ecr)
+                strip_ecr=true
+                shift
+                ;;
+            -l|--label)
+                label_name="$2"
+                shift 2
+                ;;
+            --skip)
+                skip_containers="$2"
+                shift 2
+                ;;
+            *)
+                echo "Unknown option: $1"
+                return 1
+                ;;
+        esac
+    done
+    
+    # Check if at least one app label is provided
+    if [ $# -eq 0 ]; then
+        echo "Usage: kgpversions [--strip-ecr] [-l|--label <label_name>] [--skip <container1,container2>] <app1> [app2] [app3] ..."
+        echo "Example: kgpimg query-tracking log-process log-write"
+        echo "         kgpimg --strip-ecr query-tracking log-process"
+        echo "         kgpimg -l component frontend backend api"
+        echo "         kgpimg --skip sidecar,proxy query-tracking log-process"
+        echo "         kgpimg --label service --strip-ecr --skip istio-proxy web-service api-service"
+        echo ""
+        echo "Options:"
+        echo "  --strip-ecr              Remove ECR repository prefix, keep only repo-id/image-name:tag"
+        echo "  -l, --label <name>       Label name to filter by (default: 'app')"
+        echo "  --skip <containers>      Comma-separated list of container names to skip"
+        return 1
+    fi
+    
+    # Build the app label list from input parameters
+    local apps=""
+    for app in "$@"; do
+        if [ -z "$apps" ]; then
+            apps="$app"
+        else
+            apps="$apps, $app"
+        fi
+    done
+    
+    # Execute the kubectl command with the dynamic app list and label name
+    local output
+    output=$(kgp -l "$label_name in ($apps)" -o jsonpath='{range .items[*]}{@.metadata.namespace}{range @.spec.containers[*]}{" "}{.name}{" "}{.image}{end}{"\n"}{end}')
+    
+    # Apply container filtering if skip list is provided
+    if [ -n "$skip_containers" ]; then
+        # Convert comma-separated skip list to pipe-separated for grep
+        local skip_pattern=$(echo "$skip_containers" | sed 's/,/|/g')
+        output=$(echo "$output" | awk -v skip="$skip_pattern" '{
+            # Split the line into fields
+            n = split($0, fields)
+            result = fields[1]  # namespace
+            
+            # Process container name/image pairs (starting from field 2)
+            for (i = 2; i < n; i += 2) {
+                container_name = fields[i]
+                container_image = fields[i+1]
+                
+                # Check if container name should be skipped
+                if (skip && match(container_name, skip)) {
+                    continue
+                }
+                
+                result = result " " container_name " " container_image
+            }
+            
+            # Only print if we have containers left after filtering
+            if (NF > 1 && result != fields[1]) {
+                print result
+            }
+        }')
+    fi
+    
+    # Apply ECR stripping if requested
+    if [ "$strip_ecr" = true ]; then
+        output=$(echo "$output" | awk '{gsub(/[0-9]+\.dkr\.ecr\.[^\/]+\.amazonaws\.com\//, ""); print}')
+    fi
+    
+    # Final processing
+    echo "$output" | sort -n | uniq -c | column -t
+}

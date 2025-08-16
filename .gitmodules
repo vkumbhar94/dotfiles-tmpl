@@ -1,0 +1,19 @@
+[submodule "ohmyzsh/dot-oh-my-zsh"]
+	path = ohmyzsh/dot-oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "nvim/dot-config/nvim"]
+	path = nvim/dot-config/nvim
+	url = git@github.com:vkumbhar94/nvimdots.git
+	branch = stable
+[submodule "ohmyzsh/dot-ohmyzsh-custom/themes/powerlevel10k"]
+	path = ohmyzsh/dot-ohmyzsh-custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "ohmyzsh/dot-ohmyzsh-custom/plugins/zsh-autosuggestions"]
+	path = ohmyzsh/dot-ohmyzsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "ohmyzsh/dot-ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
+	path = ohmyzsh/dot-ohmyzsh-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "ohmyzsh/dot-ohmyzsh-custom/plugins/auto-notify"]
+	path = ohmyzsh/dot-ohmyzsh-custom/plugins/auto-notify
+	url = https://github.com/MichaelAquilina/zsh-auto-notify.git

@@ -1,0 +1,211 @@
+tap "dwarvesf/tap"
+tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "jesseduffield/lazygit"
+tap "nikitabobko/tap"
+tap "pkgxdev/made"
+tap "pyroscope-io/brew"
+tap "saulpw/vd"
+tap "tomanthony/brews"
+# Search tool like grep, but optimized for programmers
+brew "ack"
+# Slice and dice log files on the command-line
+brew "angle-grinder"
+# Mozilla CA certificate store
+brew "ca-certificates"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# Light UNIX download accelerator
+brew "axel"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Platform built on V8 to build network applications
+brew "node"
+# Distributed Code Component Manager
+brew "bit"
+# Cross-platform make
+brew "cmake"
+# Conventional Commits toolbox
+brew "cocogitto"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Power of curl, ease of use of httpie
+brew "curlie"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Run arbitrary commands when files change
+brew "entr"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
+# Lightweight scripting language for querying databases
+brew "flux"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Fast, simple fuzzy text selector with an advanced scoring algorithm
+brew "fzy"
+# Disk usage analyzer with console interface written in Go
+brew "gdu"
+# GitHub command-line tool
+brew "gh"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Extensions to follow Vincent Driessen's branching model
+brew "git-flow"
+# Utility to keep git repos fresh
+brew "git-fresh"
+# High-level command-line interface for Git
+brew "git-town"
+# Language server for the Go language
+brew "gopls"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Tool for glamorous shell scripts
+brew "gum"
+# Kubernetes package manager
+brew "helm"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Run and Test HTTP Requests with plain text and curl
+brew "hurl"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Manage your Java environment
+brew "jenv"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Kubernetes prompt info for bash and zsh
+brew "kube-ps1"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Curses-based tool for viewing and analyzing log files
+brew "lnav"
+# Replacement for ls, cp and other commands for object storage
+brew "minio-mc"
+# CLI for MySQL with auto-completion and syntax highlighting
+brew "mycli"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Modern shell for the GitHub era
+brew "nushell"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Standalone binary that can run anything
+brew "pkgx"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
+# Python version management
+brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
+# State machine compiler
+brew "ragel"
+# Ruby version manager
+brew "rbenv"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Language-agnostic "shebang interpreter" to write scripts in compiled languages
+brew "scriptisto"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Official tldr client written in Rust
+brew "tlrc"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Modern watch command
+brew "viddy"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Friendly and fast tool for sending HTTP requests
+brew "xh"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Open source continuous profiling software
+brew "pyroscope-io/brew/pyroscope"
+# Terminal utility for exploring and arranging tabular data
+brew "saulpw/vd/visidata"
+# Allows you setup pre-configured layouts of panes in iTerm2
+brew "tomanthony/brews/itermocil"
+# Command-line interface for 1Password
+cask "1password-cli"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
+# Utility to dim background/inactive content in the screen
+cask "blurred"
+# Utility that prevents the system from going to sleep
+cask "caffeine"
+# Colemak mod for more comfortable typing (DH variant)
+cask "colemak-dh"
+# Colemak mod for more comfortable typing (DHk variant)
+cask "colemak-dhk"
+# OpenJDK distribution from Amazon
+cask "corretto@11"
+# OpenJDK distribution from Amazon
+cask "corretto@17"
+# OpenJDK distribution from Amazon
+cask "corretto@21"
+cask "font-hack-nerd-font"
+# UI for Kubernetes
+cask "headlamp"
+# Testing client for REST, GraphQL, and HTTP APIs
+cask "httpie-desktop"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Keyboard customiser
+cask "karabiner-elements"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
+cask "mac-mouse-fix"
+# Collaboration platform for API development
+cask "postman"
+# Control your tools with a few keystrokes
+cask "raycast"
+# LaTeX editor
+cask "texstudio"
+# Run commands and display their output on the desktop
+cask "ubersicht"
+# Visual editors for data
+cask "valentina-studio"
+cask "vimmotion"
+# Open-source code editor
+cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"
+# HTML to PDF renderer
+cask "wkhtmltopdf"
+vscode "isudox.vscode-jetbrains-keybindings"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-vscode-remote.remote-containers"

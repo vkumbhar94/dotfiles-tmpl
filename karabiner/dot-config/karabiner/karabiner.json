@@ -1,0 +1,243 @@
+{
+    "profiles": [
+        {
+            "name": "Default profile",
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "key_code": "delete_or_backspace" }]
+                }
+            ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Map 'l' + ';' to 'ctrl + l'",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "l" },
+                                        { "key_code": "semicolon" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Combo 1 + 2 to type 'dddev' and Enter",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "1" },
+                                        { "key_code": "2" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "d" },
+                                    { "key_code": "d" },
+                                    { "key_code": "d" },
+                                    { "key_code": "e" },
+                                    { "key_code": "v" },
+                                    { "key_code": "return_or_enter" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Combo f + g to type 'skrndev' and Enter",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "f" },
+                                        { "key_code": "g" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "s" },
+                                    { "key_code": "k" },
+                                    { "key_code": "r" },
+                                    { "key_code": "n" },
+                                    { "key_code": "d" },
+                                    { "key_code": "e" },
+                                    { "key_code": "v" },
+                                    { "key_code": "return_or_enter" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Combo d + f to type 'ggpush' and Enter",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "d" },
+                                        { "key_code": "f" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "g" },
+                                    { "key_code": "g" },
+                                    { "key_code": "p" },
+                                    { "key_code": "u" },
+                                    { "key_code": "s" },
+                                    { "key_code": "h" },
+                                    { "key_code": "return_or_enter" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Combo j + k to type 'ggpull' and Enter",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "j" },
+                                        { "key_code": "k" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "g" },
+                                    { "key_code": "g" },
+                                    { "key_code": "p" },
+                                    { "key_code": "u" },
+                                    { "key_code": "l" },
+                                    { "key_code": "l" },
+                                    { "key_code": "return_or_enter" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Combo x + c to type 'npxcz' and Enter",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "x" },
+                                        { "key_code": "c" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "n" },
+                                    { "key_code": "p" },
+                                    { "key_code": "x" },
+                                    { "key_code": "c" },
+                                    { "key_code": "z" },
+                                    { "key_code": "return_or_enter" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Press Tab when S and D are pressed together",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "s" },
+                                        { "key_code": "d" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "tab" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Press Enter when K and L are pressed together",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "k" },
+                                        { "key_code": "l" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Press Escape when Q and W are pressed together",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "q" },
+                                        { "key_code": "w" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Press Backspace when p and [ are pressed together",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "p" },
+                                        { "key_code": "open_bracket" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "Combo Keys",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "key_code": "delete_or_backspace" }]
+                }
+            ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}

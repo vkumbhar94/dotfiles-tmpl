@@ -1,0 +1,2 @@
+[url "ssh://git@stash.office.com:7999/"]
+  insteadOf = https://stash.office.com/

@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# -------------------------------------------------------------------
+# Bootstrap Script
+#
+# This script bootstraps your macOS development environment by
+# installing Homebrew, iTerm2, GNU Stow, and Oh My Zsh.
+#
+# Prerequisites:
+#   - macOS operating system.
+#
+# Usage:
+#   chmod +x bootstrap
+#   ./bootstrap
+#
+# -------------------------------------------------------------------
+
+set -e
+
+# Ensure the script is running on macOS
+if [[ "$(uname)" != "Darwin" ]]; then
+	echo "This bootstrap script is designed for macOS only."
+	exit 1
+fi
+
+echo "🚀 Bootstrapping your macOS development environment..."
+
+# -------------------------------------
+# Homebrew Installation
+# -------------------------------------
+if ! command -v brew >/dev/null 2>&1; then
+	echo "🍺 Homebrew not found. Installing Homebrew..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	# Ensure Homebrew is in the PATH for the current session.
+	if [ -d "/opt/homebrew/bin" ]; then
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+	else
+		eval "$(/usr/local/bin/brew shellenv)"
+	fi
+else
+	echo "🍺 Homebrew is already installed."
+fi
+
+echo "📦 Updating Homebrew..."
+brew update
+
+echo "Stowing dotfiles..."
+make restow
+
+echo "Stowing completed..."
+
+echo "📦 Upgrading Homebrew packages..."
+make brew-bundle
+echo "✅ Updated Homebrew packages successfully."
+
+echo "✅ Bootstrap completed successfully. Your development environment is ready to go!"

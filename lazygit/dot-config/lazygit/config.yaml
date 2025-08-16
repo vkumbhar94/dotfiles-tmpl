@@ -1,0 +1,2 @@
+services:
+  ssh://git@stash.logicmonitor.com:7999/: bitbucketServer:stash.logicmonitor.com

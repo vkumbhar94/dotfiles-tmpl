@@ -1,0 +1,214 @@
+{
+  "items": [
+    {
+      "category": "System Design Pattern",
+      "title": "Circuit Breaker Pattern",
+      "content": "Prevent cascading failures by wrapping external calls. When failures exceed threshold, open circuit and fail fast. Auto-retry after timeout.",
+      "icon": "⚡"
+    },
+    {
+      "category": "System Design Pattern",
+      "title": "CQRS (Command Query Responsibility Segregation)",
+      "content": "Separate read and write models. Optimize each independently. Use when read/write patterns differ significantly or need different scaling.",
+      "icon": "⚡"
+    },
+    {
+      "category": "System Design Pattern",
+      "title": "Event Sourcing",
+      "content": "Store state changes as events, not current state. Enables audit trails, time travel debugging, and event replay. Pairs well with CQRS.",
+      "icon": "⚡"
+    },
+    {
+      "category": "System Design Pattern",
+      "title": "Saga Pattern",
+      "content": "Manage distributed transactions with compensating actions. Each step has a rollback. Use choreography (events) or orchestration (coordinator).",
+      "icon": "⚡"
+    },
+    {
+      "category": "System Design Pattern",
+      "title": "Strangler Fig Pattern",
+      "content": "Gradually migrate legacy systems by routing traffic to new implementation incrementally. Reduces risk, enables continuous delivery during migration.",
+      "icon": "⚡"
+    },
+    {
+      "category": "Scalability Principle",
+      "title": "Horizontal vs Vertical Scaling",
+      "content": "Horizontal: Add more machines (better fault tolerance, unlimited scaling). Vertical: Bigger machine (simpler, but limited and single point of failure).",
+      "icon": "📈"
+    },
+    {
+      "category": "Scalability Principle",
+      "title": "Caching Strategies",
+      "content": "Cache-aside: App manages cache. Write-through: Update DB and cache together. Write-behind: Update cache first, DB async. Choose based on consistency needs.",
+      "icon": "📈"
+    },
+    {
+      "category": "Scalability Principle",
+      "title": "Database Sharding",
+      "content": "Partition data across multiple DBs. Horizontal partitioning by key (user ID, region). Increases throughput but adds complexity. Plan shard key carefully.",
+      "icon": "📈"
+    },
+    {
+      "category": "Scalability Principle",
+      "title": "Load Balancing Strategies",
+      "content": "Round-robin: Simple rotation. Least connections: Route to least busy. Consistent hashing: Minimize reshuffling. Health checks: Avoid failed nodes.",
+      "icon": "📈"
+    },
+    {
+      "category": "Scalability Principle",
+      "title": "Asynchronous Processing",
+      "content": "Offload long-running tasks to queues. Improves response times, enables retry logic, and decouples services. Use for emails, reports, batch jobs.",
+      "icon": "📈"
+    },
+    {
+      "category": "Trade-offs",
+      "title": "Microservices vs Monolith",
+      "content": "Microservices: Independent deploy, scale, tech choice. Cost: complexity, network overhead, distributed debugging. Start monolith, split when needed.",
+      "icon": "⚖️"
+    },
+    {
+      "category": "Trade-offs",
+      "title": "SQL vs NoSQL",
+      "content": "SQL: ACID, complex queries, relationships. NoSQL: Flexible schema, horizontal scaling, eventual consistency. Choose based on data structure and query patterns.",
+      "icon": "⚖️"
+    },
+    {
+      "category": "Trade-offs",
+      "title": "Consistency vs Availability (CAP)",
+      "content": "Can't have both during partition. CP: Strong consistency, reject writes when partitioned. AP: Always available, eventual consistency. Choose based on business needs.",
+      "icon": "⚖️"
+    },
+    {
+      "category": "Trade-offs",
+      "title": "Normalization vs Denormalization",
+      "content": "Normalize: Reduce redundancy, easier updates. Denormalize: Faster reads, duplicate data. Denormalize for read-heavy, normalize for write-heavy.",
+      "icon": "⚖️"
+    },
+    {
+      "category": "Trade-offs",
+      "title": "Build vs Buy",
+      "content": "Build: Full control, exact fit, learning. Buy: Faster, maintained, proven. Build core differentiators, buy commodities. Consider total cost of ownership.",
+      "icon": "⚖️"
+    },
+    {
+      "category": "Decision Framework",
+      "title": "ADR (Architecture Decision Record)",
+      "content": "Document: Context, Decision, Consequences. Keep it short. Version control it. Immutable - don't edit, supersede. Makes decisions transparent and reversible.",
+      "icon": "🎯"
+    },
+    {
+      "category": "Decision Framework",
+      "title": "RFC (Request for Comments)",
+      "content": "Propose significant changes with: Problem, Proposal, Alternatives, Open Questions. Gather async feedback. Builds consensus and catches issues early.",
+      "icon": "🎯"
+    },
+    {
+      "category": "Decision Framework",
+      "title": "DACI Framework",
+      "content": "Driver: Owns decision. Approver: Final say. Contributors: Input. Informed: Notified. Clarifies roles, speeds decisions, reduces politics.",
+      "icon": "🎯"
+    },
+    {
+      "category": "Decision Framework",
+      "title": "One-way vs Two-way Doors",
+      "content": "One-way: Hard to reverse (architecture, data models). Slow, careful. Two-way: Easy to reverse (UI, configs). Fast, experimental. Know which you're opening.",
+      "icon": "🎯"
+    },
+    {
+      "category": "Decision Framework",
+      "title": "Data-Driven Decisions",
+      "content": "Gather metrics before deciding. A/B test when possible. Define success criteria upfront. Avoid HiPPO (Highest Paid Person's Opinion). Let data speak.",
+      "icon": "🎯"
+    },
+    {
+      "category": "Communication",
+      "title": "Writing Design Docs",
+      "content": "Start with TL;DR. State problem clearly. Propose solution with diagrams. List alternatives considered. Define success metrics. Keep it concise.",
+      "icon": "💬"
+    },
+    {
+      "category": "Communication",
+      "title": "Explaining Complex Topics",
+      "content": "Use analogies. Start high-level, drill down. Tailor to audience (exec vs engineer). Use visuals. Check understanding. Avoid jargon unless necessary.",
+      "icon": "💬"
+    },
+    {
+      "category": "Communication",
+      "title": "Stakeholder Management",
+      "content": "Understand their goals. Speak their language (business value > tech details). Regular updates prevent surprises. Manage expectations. Say no with alternatives.",
+      "icon": "💬"
+    },
+    {
+      "category": "Communication",
+      "title": "Giving Technical Feedback",
+      "content": "Be specific, not vague. Focus on code, not person. Explain why, don't just prescribe. Ask questions. Praise good work. Use 'we' not 'you'.",
+      "icon": "💬"
+    },
+    {
+      "category": "Communication",
+      "title": "Escalating Issues",
+      "content": "Escalate early when blocked. Come with options, not just problems. Be clear about urgency and impact. Document context. Follow up promptly.",
+      "icon": "💬"
+    },
+    {
+      "category": "Best Practices",
+      "title": "SOLID - Single Responsibility",
+      "content": "A class should have one reason to change. Separate concerns. Makes code easier to understand, test, and modify. Example: Separate data access from business logic.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "SOLID - Open/Closed Principle",
+      "content": "Open for extension, closed for modification. Use interfaces, abstract classes, composition. Add features without changing existing code. Reduces regression risk.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "SOLID - Liskov Substitution",
+      "content": "Subtypes must be substitutable for base types. Don't break parent contracts. Prevents unexpected behavior. If it looks like a duck but needs batteries, wrong abstraction.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "DRY - Don't Repeat Yourself",
+      "content": "Every piece of knowledge should have single source. Extract common logic. But: Don't abstract too early. Similar code isn't always duplicate knowledge.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "KISS - Keep It Simple",
+      "content": "Simplest solution that works. Avoid premature optimization. Complexity is the enemy of reliability. Can a junior developer understand this in 6 months?",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "YAGNI - You Aren't Gonna Need It",
+      "content": "Don't build features you don't need now. Solve today's problems. Future-proofing often wastes time. Build for change, not for every possible scenario.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "Fail Fast Principle",
+      "content": "Validate early, throw exceptions quickly. Don't let bad data propagate. Makes debugging easier. Use assertions, type checking, input validation at boundaries.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "Code Reviews Best Practices",
+      "content": "Review small PRs (<400 lines). Check: logic, security, tests, performance, readability. Automate style checks. Be timely. Learn from others' code.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "Testing Strategy",
+      "content": "Test pyramid: Many unit, some integration, few E2E. Test behavior, not implementation. Mock external dependencies. Keep tests fast. Treat test code as production code.",
+      "icon": "✨"
+    },
+    {
+      "category": "Best Practices",
+      "title": "Technical Debt Management",
+      "content": "Make it visible. Track in backlog. Allocate 20% time for cleanup. Don't let it compound. Sometimes debt is strategic - document it. Pay high-interest debt first.",
+      "icon": "✨"
+    }
+  ]
+}

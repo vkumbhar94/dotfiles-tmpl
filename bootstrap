@@ -52,4 +52,8 @@ echo "📦 Upgrading Homebrew packages..."
 make brew-bundle
 echo "✅ Updated Homebrew packages successfully."
 
+echo "📦 Syncing ZSH Plugins..."
+make zsh-plugins
+echo "✅ Updated ZSH Plugins successfully."
+
 echo "✅ Bootstrap completed successfully. Your development environment is ready to go!"

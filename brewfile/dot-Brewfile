@@ -2,6 +2,7 @@ tap "dwarvesf/tap"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
 tap "nikitabobko/tap"
 tap "pkgxdev/made"
@@ -22,12 +23,16 @@ brew "gettext"
 brew "axel"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Distributed Code Component Manager
 brew "bit"
+# New way to see and navigate directory trees
+brew "broot"
 # Cross-platform make
 brew "cmake"
+# SQL-like query language for csv
+brew "csvq"
 # Conventional Commits toolbox
 brew "cocogitto"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -66,6 +71,10 @@ brew "git-fresh"
 brew "git-town"
 # Language server for the Go language
 brew "gopls"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Tool for glamorous shell scripts
@@ -76,8 +85,10 @@ brew "helm"
 brew "httpie"
 # Run and Test HTTP Requests with plain text and curl
 brew "hurl"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Command-line pager for JSON data
+brew "jless"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
@@ -94,6 +105,8 @@ brew "kustomize"
 brew "lazygit"
 # Curses-based tool for viewing and analyzing log files
 brew "lnav"
+# Java-based project management
+brew "maven"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
 # CLI for MySQL with auto-completion and syntax highlighting
@@ -104,8 +117,6 @@ brew "neovim"
 brew "ninja"
 # Modern shell for the GitHub era
 brew "nushell"
-# Create, run, and share large language models (LLMs)
-brew "ollama"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Standalone binary that can run anything
@@ -126,6 +137,10 @@ brew "ripgrep"
 brew "rust"
 # Language-agnostic "shebang interpreter" to write scripts in compiled languages
 brew "scriptisto"
+# Terminal interface for StackOverflow
+brew "so"
+# Cross-shell prompt for astronauts
+# brew "starship"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -134,6 +149,8 @@ brew "stow"
 brew "thefuck"
 # Official tldr client written in Rust
 brew "tlrc"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -144,6 +161,8 @@ brew "viddy"
 brew "watch"
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Shell extension to navigate your filesystem faster
@@ -154,6 +173,8 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # Open source continuous profiling software
 brew "pyroscope-io/brew/pyroscope"
+# A simple terminal UI for docker, written in Go
+brew "jesseduffield/lazydocker/lazydocker"
 # Terminal utility for exploring and arranging tabular data
 brew "saulpw/vd/visidata"
 # Allows you setup pre-configured layouts of panes in iTerm2
@@ -161,23 +182,19 @@ brew "tomanthony/brews/itermocil"
 # Command-line interface for 1Password
 cask "1password-cli"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
 # Utility to dim background/inactive content in the screen
 cask "blurred"
-# Utility that prevents the system from going to sleep
-cask "caffeine"
 # Colemak mod for more comfortable typing (DH variant)
 cask "colemak-dh"
 # Colemak mod for more comfortable typing (DHk variant)
 cask "colemak-dhk"
 # OpenJDK distribution from Amazon
-cask "corretto@11"
-# OpenJDK distribution from Amazon
-cask "corretto@17"
-# OpenJDK distribution from Amazon
 cask "corretto@21"
+# OpenJDK distribution from Amazon
+cask "corretto@25"
 cask "font-hack-nerd-font"
 # UI for Kubernetes
 cask "headlamp"
@@ -193,19 +210,23 @@ cask "mac-mouse-fix"
 cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
+# MySQL/MariaDB database management
+cask "sequel-ace"
 # LaTeX editor
 cask "texstudio"
+# Utility to hide the notch
+cask "topnotch"
 # Run commands and display their output on the desktop
 cask "ubersicht"
-# Visual editors for data
-cask "valentina-studio"
-cask "vimmotion"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
 # HTML to PDF renderer
 cask "wkhtmltopdf"
+# All-in-One Java Troubleshooting Tool
+cask "visualvm"
 vscode "isudox.vscode-jetbrains-keybindings"
+vscode "github.copilot-chat"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-vscode-remote.remote-containers"

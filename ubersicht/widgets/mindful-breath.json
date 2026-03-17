@@ -1,0 +1,89 @@
+{
+  "techniques": [
+    {
+      "name": "Box Breathing",
+      "description": "Equal counts for calm & focus",
+      "pattern": [
+        { "phase": "Breathe In", "duration": 4, "color": "#4ECDC4" },
+        { "phase": "Hold", "duration": 4, "color": "#45B7D1" },
+        { "phase": "Breathe Out", "duration": 4, "color": "#96CEB4" },
+        { "phase": "Hold", "duration": 4, "color": "#FFEAA7" }
+      ],
+      "cycles": 3
+    },
+    {
+      "name": "4-7-8 Relaxation",
+      "description": "Dr. Weil's calming technique",
+      "pattern": [
+        { "phase": "Breathe In", "duration": 4, "color": "#74B9FF" },
+        { "phase": "Hold", "duration": 7, "color": "#A29BFE" },
+        { "phase": "Breathe Out", "duration": 8, "color": "#FD79A8" }
+      ],
+      "cycles": 4
+    },
+    {
+      "name": "Deep Calm",
+      "description": "Longer exhale for relaxation",
+      "pattern": [
+        { "phase": "Breathe In", "duration": 4, "color": "#55EFC4" },
+        { "phase": "Hold", "duration": 2, "color": "#81ECEC" },
+        { "phase": "Breathe Out", "duration": 6, "color": "#A29BFE" }
+      ],
+      "cycles": 4
+    },
+    {
+      "name": "Quick Reset",
+      "description": "Fast energizing breath",
+      "pattern": [
+        { "phase": "Breathe In", "duration": 2, "color": "#FFEAA7" },
+        { "phase": "Breathe Out", "duration": 2, "color": "#FAB1A0" }
+      ],
+      "cycles": 5
+    },
+    {
+      "name": "Extended Exhale",
+      "description": "Release stress & tension",
+      "pattern": [
+        { "phase": "Breathe In", "duration": 3, "color": "#74B9FF" },
+        { "phase": "Breathe Out", "duration": 7, "color": "#A29BFE" }
+      ],
+      "cycles": 4
+    }
+  ],
+  "reminders": [
+    "Take a moment to relax your shoulders",
+    "Notice 3 things you can see right now",
+    "Feel your feet on the ground",
+    "Take 3 slow, deep breaths",
+    "Stretch your neck gently side to side",
+    "Close your eyes for 10 seconds",
+    "Smile - it releases endorphins",
+    "Stand up and stretch for 30 seconds",
+    "Look at something 20 feet away for 20 seconds",
+    "Drink some water mindfully",
+    "Notice the temperature of the air on your skin",
+    "Wiggle your fingers and toes"
+  ],
+  "breathingInsights": [
+    "Smile - it releases endorphins",
+    "Deep breathing lowers cortisol levels",
+    "Each breath brings fresh oxygen to your brain",
+    "Breathing slowly activates your vagus nerve",
+    "Your heart rate syncs with your breath",
+    "Mindful breathing reduces blood pressure",
+    "Each exhale releases tension from your body",
+    "Breathing deeply improves focus and clarity",
+    "Your breath is your anchor to the present",
+    "Slow breathing calms your nervous system",
+    "Each breath is a chance to reset",
+    "Deep breaths increase lymphatic drainage",
+    "Breathing consciously reduces anxiety",
+    "Your breath connects body and mind",
+    "Each inhale energizes, each exhale relaxes",
+    "Controlled breathing improves sleep quality",
+    "Deep breaths boost your immune system",
+    "Your breath is always available to calm you",
+    "Breathing slowly improves digestion",
+    "Each breath brings you closer to calm"
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "items": [
+    {
+      "category": "DSA - Arrays",
+      "title": "Two Pointer Technique",
+      "content": "Use two pointers moving towards each other or same direction. Classic: Two Sum (sorted), Remove duplicates, Container with most water. Time: O(n), Space: O(1).",
+      "icon": "🔢"
+    },
+    {
+      "category": "DSA - Arrays",
+      "title": "Sliding Window Pattern",
+      "content": "Maintain window of elements. Expand/shrink based on condition. Use for: Substring problems, max/min subarray. Fixed vs dynamic window. Time: O(n).",
+      "icon": "🔢"
+    },
+    {
+      "category": "DSA - Arrays",
+      "title": "Kadane's Algorithm",
+      "content": "Find maximum subarray sum. Track current sum, reset if negative. Classic DP problem with O(n) solution. Key: Local max vs global max.",
+      "icon": "🔢"
+    },
+    {
+      "category": "DSA - Arrays",
+      "title": "Dutch National Flag",
+      "content": "Three-way partitioning. Sort array of 0s, 1s, 2s in O(n) time. Use 3 pointers: low, mid, high. Applications: 3-way quicksort, color sorting.",
+      "icon": "🔢"
+    },
+    {
+      "category": "DSA - Hash Tables",
+      "title": "Hash Table Fundamentals",
+      "content": "Key-value storage. Average O(1) insert/lookup. Handle collisions: Chaining or open addressing. Load factor affects performance. Rehashing for scaling.",
+      "icon": "🗂️"
+    },
+    {
+      "category": "DSA - Hash Tables",
+      "title": "Hash Set Applications",
+      "content": "Detect duplicates O(n). Check existence. Two Sum using HashMap. Frequency counting. Anagram grouping. Trade space for time.",
+      "icon": "🗂️"
+    },
+    {
+      "category": "DSA - Heaps",
+      "title": "Min/Max Heap Operations",
+      "content": "Complete binary tree. Parent ≤ children (min-heap). Insert: O(log n), Extract-min: O(log n), Peek: O(1). Heapify: O(n). Applications: Priority queue.",
+      "icon": "📊"
+    },
+    {
+      "category": "DSA - Heaps",
+      "title": "Top K Elements Pattern",
+      "content": "Maintain K-size heap. For Kth largest: use min-heap of size K. For Kth smallest: use max-heap. Time: O(n log k). Space: O(k).",
+      "icon": "📊"
+    },
+    {
+      "category": "DSA - Strings",
+      "title": "KMP Pattern Matching",
+      "content": "Efficient string search. Build LPS (Longest Prefix Suffix) array. Time: O(m+n) vs naive O(m*n). Useful for: Pattern matching, substring search.",
+      "icon": "📝"
+    },
+    {
+      "category": "DSA - Strings",
+      "title": "Trie (Prefix Tree)",
+      "content": "Tree for string storage/search. Fast prefix matching O(m). Use for: Autocomplete, spell check, IP routing. Space trade-off for speed.",
+      "icon": "📝"
+    },
+    {
+      "category": "DSA - Trees",
+      "title": "Binary Tree Traversals",
+      "content": "Inorder (L-Root-R), Preorder (Root-L-R), Postorder (L-R-Root). Recursive vs Iterative (using stack). Level-order uses queue. Time: O(n).",
+      "icon": "🌳"
+    },
+    {
+      "category": "DSA - Trees",
+      "title": "LCA (Lowest Common Ancestor)",
+      "content": "Find common ancestor of two nodes. BST: Compare values. Binary tree: Recursive search both sides. Applications: Organization charts, file systems.",
+      "icon": "🌳"
+    },
+    {
+      "category": "DSA - Trees",
+      "title": "Balanced BST Operations",
+      "content": "AVL/Red-Black trees maintain O(log n) height. Rotations keep balance. Insert/Delete/Search: O(log n). Know when to use vs HashMap.",
+      "icon": "🌳"
+    },
+    {
+      "category": "DSA - Graphs",
+      "title": "DFS vs BFS",
+      "content": "DFS: Stack/Recursion, explores depth. Use: Cycle detection, topological sort. BFS: Queue, explores breadth. Use: Shortest path, level-order.",
+      "icon": "🕸️"
+    },
+    {
+      "category": "DSA - Graphs",
+      "title": "Dijkstra's Algorithm",
+      "content": "Shortest path from source to all nodes. Use min-heap. Time: O((V+E)logV). Doesn't work with negative weights. Real-world: GPS, network routing.",
+      "icon": "🕸️"
+    },
+    {
+      "category": "DSA - Graphs",
+      "title": "Topological Sort",
+      "content": "Linear ordering of directed acyclic graph (DAG). Use DFS or Kahn's algorithm. Applications: Task scheduling, build systems, course prerequisites.",
+      "icon": "🕸️"
+    },
+    {
+      "category": "DSA - Graphs",
+      "title": "Union Find (Disjoint Set)",
+      "content": "Track connected components. Union: Connect sets. Find: Get root. Path compression + union by rank: Nearly O(1). Use: Detect cycles, Kruskal's MST.",
+      "icon": "🕸️"
+    },
+    {
+      "category": "DSA - Backtracking",
+      "title": "Backtracking Pattern",
+      "content": "Explore all possibilities, backtrack on dead ends. Template: Choose → Explore → Unchoose. Use for: Permutations, combinations, N-Queens, Sudoku.",
+      "icon": "🔄"
+    },
+    {
+      "category": "DSA - Backtracking",
+      "title": "Pruning Optimization",
+      "content": "Skip invalid branches early. Check constraints before recursion. Memoization for overlapping subproblems. Reduces exponential to manageable time.",
+      "icon": "🔄"
+    },
+    {
+      "category": "DSA - Bit Manipulation",
+      "title": "Common Bit Operations",
+      "content": "Set bit: x | (1<<i). Clear: x & ~(1<<i). Toggle: x ^ (1<<i). Check: (x & (1<<i)) != 0. Count set bits: Brian Kernighan's algorithm.",
+      "icon": "⚡"
+    },
+    {
+      "category": "DSA - Bit Manipulation",
+      "title": "XOR Properties",
+      "content": "a ^ a = 0, a ^ 0 = a. Commutative & Associative. Use: Find single number, swap without temp, detect different bits. Parity checking.",
+      "icon": "⚡"
+    },
+    {
+      "category": "DSA - Dynamic Programming",
+      "title": "DP Pattern Recognition",
+      "content": "Look for: Optimal substructure, overlapping subproblems. Ask: Can I break into smaller problems? Am I solving same thing multiple times? Memoize!",
+      "icon": "💎"
+    },
+    {
+      "category": "DSA - Dynamic Programming",
+      "title": "Knapsack Variations",
+      "content": "0/1 Knapsack: Can't repeat items. Unbounded: Infinite items. Fractional: Greedy works. DP table: dp[i][w] = max value with i items, w capacity.",
+      "icon": "💎"
+    },
+    {
+      "category": "DSA - Dynamic Programming",
+      "title": "Longest Common Subsequence",
+      "content": "Find longest subsequence in both strings. 2D DP: dp[i][j] = LCS of first i chars of s1, j chars of s2. Time: O(m*n). Base for diff, edit distance.",
+      "icon": "💎"
+    },
+    {
+      "category": "DSA - Dynamic Programming",
+      "title": "Coin Change Variations",
+      "content": "Min coins for amount: dp[i] = min(dp[i-coin] + 1). Count ways: dp[i] += dp[i-coin]. Order matters vs not. Unbounded knapsack variant.",
+      "icon": "💎"
+    },
+    {
+      "category": "DSA - Sorting",
+      "title": "QuickSort & Partitioning",
+      "content": "Divide-conquer. Pick pivot, partition around it. Average O(n log n), worst O(n²). In-place. Use partition logic for QuickSelect (Kth element).",
+      "icon": "🔀"
+    },
+    {
+      "category": "DSA - Sorting",
+      "title": "MergeSort Stability",
+      "content": "Stable sort: Preserves relative order. Guaranteed O(n log n). Not in-place: O(n) space. Use for: External sorting, linked lists, when stability needed.",
+      "icon": "🔀"
+    },
+    {
+      "category": "Complexity Analysis",
+      "title": "Time Complexity Classes",
+      "content": "O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!). Know when each is acceptable. n=10⁶: O(n log n) OK, O(n²) timeout.",
+      "icon": "📐"
+    },
+    {
+      "category": "Complexity Analysis",
+      "title": "Space Complexity Tradeoffs",
+      "content": "Recursive stack space: O(depth). Memoization: Trade space for time. In-place algorithms save space. Hash tables: O(n) space for O(1) lookup.",
+      "icon": "📐"
+    },
+    {
+      "category": "LLD - Design Patterns",
+      "title": "Singleton Pattern",
+      "content": "One instance globally. Thread-safe: Double-checked locking or enum. Use: Config, Logger, DB connection pool. Caution: Global state, testing issues.",
+      "icon": "🏗️"
+    },
+    {
+      "category": "LLD - Design Patterns",
+      "title": "Factory Pattern",
+      "content": "Create objects without exposing creation logic. Abstract Factory: Family of related objects. Use: Different DB drivers, UI components. Decouples client from concrete classes.",
+      "icon": "🏗️"
+    },
+    {
+      "category": "LLD - Design Patterns",
+      "title": "Observer Pattern",
+      "content": "One-to-many dependency. Subject notifies observers of state changes. Use: Event systems, MVC, pub-sub. Example: Newsletter subscriptions, stock price updates.",
+      "icon": "🏗️"
+    },
+    {
+      "category": "LLD - Design Patterns",
+      "title": "Strategy Pattern",
+      "content": "Encapsulate algorithms, make them interchangeable. Define family of algorithms. Use: Payment methods, sorting algorithms, compression. Avoids if-else chains.",
+      "icon": "🏗️"
+    },
+    {
+      "category": "LLD - SOLID",
+      "title": "Dependency Inversion",
+      "content": "Depend on abstractions, not concretions. High-level modules shouldn't depend on low-level. Use interfaces. Enables testing, flexibility, decoupling.",
+      "icon": "🔨"
+    },
+    {
+      "category": "LLD - SOLID",
+      "title": "Interface Segregation",
+      "content": "Many specific interfaces > one general. Clients shouldn't depend on unused methods. Split fat interfaces. Prevents unnecessary coupling.",
+      "icon": "🔨"
+    },
+    {
+      "category": "LLD - Object Oriented",
+      "title": "Composition vs Inheritance",
+      "content": "Favor composition over inheritance. Inheritance: IS-A. Composition: HAS-A. Composition more flexible, avoids deep hierarchies. Use interfaces for contracts.",
+      "icon": "🔨"
+    },
+    {
+      "category": "LLD - Object Oriented",
+      "title": "Encapsulation Best Practices",
+      "content": "Hide internal state. Expose behavior, not data. Use private fields, public methods. Validate in setters. Immutability when possible. Prevents invariant violations.",
+      "icon": "🔨"
+    },
+    {
+      "category": "HLD - System Components",
+      "title": "Load Balancer",
+      "content": "Distribute traffic across servers. L4 (Transport) vs L7 (Application). Algorithms: Round-robin, least connections, IP hash. Handle health checks, SSL termination.",
+      "icon": "🏛️"
+    },
+    {
+      "category": "HLD - System Components",
+      "title": "API Gateway",
+      "content": "Single entry point for clients. Handles: Routing, auth, rate limiting, logging, aggregation. Prevents coupling clients to microservices. Can become bottleneck.",
+      "icon": "🏛️"
+    },
+    {
+      "category": "HLD - System Components",
+      "title": "Message Queue",
+      "content": "Async communication. Producers/Consumers decoupled. Use: RabbitMQ, Kafka, SQS. Provides: Buffering, retry, ordering. Pattern: Task queues, pub-sub, event streaming.",
+      "icon": "🏛️"
+    },
+    {
+      "category": "HLD - System Components",
+      "title": "Cache Layer",
+      "content": "Reduce DB load, improve latency. Types: Client, CDN, App, DB. Redis/Memcached. Patterns: Cache-aside, write-through. Handle: Invalidation, expiration, consistency.",
+      "icon": "🏛️"
+    },
+    {
+      "category": "HLD - Data Storage",
+      "title": "SQL Database Design",
+      "content": "ACID guarantees. Use for: Transactions, complex queries, relationships. Scaling: Read replicas, sharding, vertical. Indexes trade write speed for read speed.",
+      "icon": "💾"
+    },
+    {
+      "category": "HLD - Data Storage",
+      "title": "NoSQL Database Types",
+      "content": "Key-Value: Redis, DynamoDB. Document: MongoDB. Column: Cassandra. Graph: Neo4j. Choose based on: Access patterns, scalability needs, consistency requirements.",
+      "icon": "💾"
+    },
+    {
+      "category": "HLD - Data Storage",
+      "title": "Database Replication",
+      "content": "Master-Slave: Writes to master, reads from slaves. Master-Master: Both accept writes, complex conflict resolution. Async vs sync. Handle: Lag, failover.",
+      "icon": "💾"
+    },
+    {
+      "category": "HLD - Data Storage",
+      "title": "ACID Properties",
+      "content": "Atomicity: All or nothing. Consistency: Valid state always. Isolation: Concurrent transactions don't interfere. Durability: Committed data persists.",
+      "icon": "💾"
+    },
+    {
+      "category": "HLD - Data Storage",
+      "title": "Normalization Levels",
+      "content": "1NF: Atomic values. 2NF: No partial dependencies. 3NF: No transitive dependencies. BCNF: Every determinant is key. Denormalize for read performance.",
+      "icon": "💾"
+    },
+    {
+      "category": "Concurrency",
+      "title": "Race Conditions",
+      "content": "Multiple threads access shared data, at least one writes. Result depends on timing. Fix: Locks, mutexes, atomic operations, immutability.",
+      "icon": "🔒"
+    },
+    {
+      "category": "Concurrency",
+      "title": "Deadlock Prevention",
+      "content": "Conditions: Mutual exclusion, hold & wait, no preemption, circular wait. Prevent: Lock ordering, timeouts, deadlock detection. Avoid nested locks.",
+      "icon": "🔒"
+    },
+    {
+      "category": "Concurrency",
+      "title": "Thread Pool Pattern",
+      "content": "Reuse threads for multiple tasks. Avoid thread creation overhead. Bounded queue for tasks. Configure: Pool size, queue size, rejection policy.",
+      "icon": "🔒"
+    },
+    {
+      "category": "System Design - Scalability",
+      "title": "Rate Limiting Algorithms",
+      "content": "Token Bucket: Tokens refill at rate. Leaky Bucket: Fixed outflow rate. Fixed/Sliding Window. Use Redis for distributed. Prevents abuse, ensures fairness.",
+      "icon": "⚙️"
+    },
+    {
+      "category": "System Design - Scalability",
+      "title": "Content Delivery Network (CDN)",
+      "content": "Distribute static content globally. Edge locations close to users. Caches: Images, CSS, JS, videos. Reduces latency, bandwidth. Invalidation strategies important.",
+      "icon": "⚙️"
+    },
+    {
+      "category": "System Design - Scalability",
+      "title": "Database Indexing Strategy",
+      "content": "B-tree for range queries. Hash for exact match. Composite for multiple columns. Too many slows writes. Monitor query plans. Index selectivity matters.",
+      "icon": "⚙️"
+    },
+    {
+      "category": "System Design - Reliability",
+      "title": "Retry with Exponential Backoff",
+      "content": "Retry failed operations with increasing delays. Add jitter to prevent thundering herd. Set max retries. Use for: Network calls, queue processing. Handle idempotency.",
+      "icon": "🛡️"
+    },
+    {
+      "category": "System Design - Reliability",
+      "title": "Health Checks & Monitoring",
+      "content": "Liveness: Is service running? Readiness: Can it handle traffic? Deep vs shallow checks. Metrics: Latency, throughput, errors. Alerts: SLI, SLO, SLA based.",
+      "icon": "🛡️"
+    },
+    {
+      "category": "System Design - Reliability",
+      "title": "Graceful Degradation",
+      "content": "Reduce functionality instead of complete failure. Example: Show cached data if DB down. Circuit breaker prevents cascade. Prioritize core features. Communicate to users.",
+      "icon": "🛡️"
+    },
+    {
+      "category": "System Design - Reliability",
+      "title": "Idempotency",
+      "content": "Same request multiple times = same result. Critical for retries. Use unique request IDs. POST not idempotent, PUT/DELETE are. Prevent duplicate payments, orders.",
+      "icon": "🛡️"
+    },
+    {
+      "category": "System Design - Performance",
+      "title": "Connection Pooling",
+      "content": "Reuse DB connections. Avoid connection overhead. Configure: Min/max pool size, connection timeout, idle timeout. Monitor pool saturation.",
+      "icon": "⚡"
+    },
+    {
+      "category": "System Design - Performance",
+      "title": "Lazy Loading",
+      "content": "Load data only when needed. Reduces initial load time. Use for: Large lists, images, modules. Watch for: N+1 query problem, over-fetching.",
+      "icon": "⚡"
+    },
+    {
+      "category": "Error Handling",
+      "title": "Exception Handling Best Practices",
+      "content": "Catch specific exceptions, not generic. Log context, don't swallow errors. Fail fast for programming errors. Retry for transient failures. Clean up resources.",
+      "icon": "⚠️"
+    },
+    {
+      "category": "Error Handling",
+      "title": "Circuit Breaker States",
+      "content": "Closed: Normal operation. Open: Fail fast, don't call service. Half-Open: Test if service recovered. Thresholds trigger state changes.",
+      "icon": "⚠️"
+    },
+    {
+      "category": "Microservices - Patterns",
+      "title": "Service Discovery",
+      "content": "Client-side: Client queries registry (Consul, Eureka). Server-side: Load balancer handles. DNS-based. Handle: Registration, health checks, failover.",
+      "icon": "🔷"
+    },
+    {
+      "category": "Microservices - Patterns",
+      "title": "API Versioning",
+      "content": "URI: /v1/users. Header: Accept: application/vnd.api+json;version=1. Semantic versioning. Deprecation policy. Support multiple versions temporarily. Communicate changes.",
+      "icon": "🔷"
+    },
+    {
+      "category": "Microservices - Patterns",
+      "title": "Distributed Tracing",
+      "content": "Track requests across services. Correlation IDs. Use: Jaeger, Zipkin. Identify bottlenecks, debug issues. Sampling for production. Understand service dependencies.",
+      "icon": "🔷"
+    },
+    {
+      "category": "Microservices - Communication",
+      "title": "Sync vs Async Communication",
+      "content": "Sync: REST, gRPC. Tight coupling, simple. Async: Message queues, events. Loose coupling, complex. Choose based on: Consistency needs, latency tolerance.",
+      "icon": "🔷"
+    },
+    {
+      "category": "Microservices - Data",
+      "title": "Database per Service",
+      "content": "Each microservice owns its data. No shared DB. Benefits: Independence, scalability. Challenges: Transactions, joins. Use: Saga pattern, event sourcing, CQRS.",
+      "icon": "🔷"
+    },
+    {
+      "category": "Problem Solving - Approach",
+      "title": "System Design Framework",
+      "content": "1. Requirements (functional, non-functional). 2. Capacity estimates. 3. High-level design. 4. Deep dive components. 5. Bottlenecks & trade-offs. Ask clarifying questions!",
+      "icon": "🎤"
+    },
+    {
+      "category": "Problem Solving - Approach",
+      "title": "Coding Problem Strategy",
+      "content": "1. Clarify requirements. 2. Examples/edge cases. 3. Brute force first. 4. Optimize (time/space). 5. Code clean solution. 6. Test with examples. 7. Analyze complexity.",
+      "icon": "🎤"
+    },
+    {
+      "category": "Problem Solving - Approach",
+      "title": "LLD Framework",
+      "content": "1. Understand requirements. 2. Identify core entities. 3. Define relationships. 4. Apply design patterns. 5. SOLID principles. 6. Draw class diagram. 7. Discuss trade-offs.",
+      "icon": "🎤"
+    },
+    {
+      "category": "Leadership - Communication",
+      "title": "STAR Method",
+      "content": "Situation: Set context. Task: What needed to be done. Action: What YOU did. Result: Outcome with metrics. Use for: Leadership, conflict, failure, success stories.",
+      "icon": "🎤"
+    },
+    {
+      "category": "Team - Evaluation",
+      "title": "Questions for Team Assessment",
+      "content": "Tech: Stack, architecture challenges, tech debt. Team: Size, structure, collaboration. Growth: Learning opportunities, career path. Process: Development, deployment, on-call.",
+      "icon": "🎤"
+    },
+    {
+      "category": "API Design",
+      "title": "RESTful Principles",
+      "content": "Stateless, resource-based URLs. HTTP methods: GET (read), POST (create), PUT (update), DELETE. Status codes: 2xx success, 4xx client error, 5xx server error.",
+      "icon": "🌐"
+    },
+    {
+      "category": "API Design",
+      "title": "Pagination Strategies",
+      "content": "Offset-based: page/limit (simple, jump to page). Cursor-based: Stable for real-time data, no skipped records. Keyset: Use last seen ID. Response: data + metadata.",
+      "icon": "🌐"
+    },
+    {
+      "category": "Security",
+      "title": "Authentication vs Authorization",
+      "content": "Authentication: Who are you? (Login, tokens). Authorization: What can you do? (Permissions, roles). JWT: Self-contained tokens. OAuth2: Delegated access.",
+      "icon": "🔐"
+    },
+    {
+      "category": "Security",
+      "title": "Common Vulnerabilities",
+      "content": "SQL Injection: Use parameterized queries. XSS: Sanitize input, escape output. CSRF: Use tokens. SSRF: Validate URLs. Principle of least privilege.",
+      "icon": "🔐"
+    },
+    {
+      "category": "Testing",
+      "title": "Test Pyramid",
+      "content": "Many unit tests (fast, isolated). Fewer integration tests (modules together). Few E2E tests (slow, brittle). Mock external dependencies. Aim for 80% coverage.",
+      "icon": "🧪"
+    },
+    {
+      "category": "Testing",
+      "title": "TDD Red-Green-Refactor",
+      "content": "Red: Write failing test. Green: Make it pass (minimal code). Refactor: Clean up while tests pass. Benefits: Better design, confidence to refactor.",
+      "icon": "🧪"
+    },
+    {
+      "category": "Behavioral - Conflict",
+      "title": "Handling Disagreements",
+      "content": "Listen first, understand their perspective. Present data/reasoning, not just opinion. Find common ground. Escalate if needed. Focus on outcome, not being right.",
+      "icon": "💬"
+    },
+    {
+      "category": "Behavioral - Mentorship",
+      "title": "Effective Mentoring",
+      "content": "Ask questions, don't just give answers. Share context, explain 'why'. Pair programming for hands-on learning. Regular 1-on-1s. Celebrate growth, give constructive feedback.",
+      "icon": "💬"
+    },
+    {
+      "category": "Behavioral - Time Management",
+      "title": "Managing Technical Priorities",
+      "content": "Urgent vs Important matrix. Say no to low-impact work. Delegate when possible. Time-box research. Balance new features vs tech debt. Communicate trade-offs.",
+      "icon": "⏰"
+    }
+  ]
+}

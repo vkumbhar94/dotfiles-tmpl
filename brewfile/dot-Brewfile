@@ -222,8 +222,6 @@ cask "ubersicht"
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
-# HTML to PDF renderer
-cask "wkhtmltopdf"
 # All-in-One Java Troubleshooting Tool
 cask "visualvm"
 vscode "isudox.vscode-jetbrains-keybindings"

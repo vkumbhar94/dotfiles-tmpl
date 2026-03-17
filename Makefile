@@ -58,6 +58,12 @@ brew-bundle:
 		exit 1; \
 	fi
 
+.PHONY: zsh-plugins
+zsh-plugins:
+	@echo "📦 Syncing ZSH plugins (git submodules)..."
+	git submodule update --init --recursive
+	@echo "✅ ZSH plugins synced."
+
 .PHONY: ubersicht
 ubersicht:
 	@echo "🔄 Refreshing Übersicht widgets..."

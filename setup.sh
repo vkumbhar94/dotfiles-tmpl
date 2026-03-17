@@ -132,7 +132,7 @@ check_previous_config() {
 		show_config
 		echo
 		echo -n -e "${PURPLE}Do you want to use the previous configuration? (Y/n): ${NC}"
-		read -r reuse_config
+		read -r reuse_config </dev/tty
 		
 		if [[ ! $reuse_config =~ ^[Nn]$ ]]; then
 			print_success "Using previous configuration"
@@ -193,7 +193,7 @@ prompt_input() {
 
 	while true; do
 		echo -n -e "${PURPLE}$prompt: ${NC}"
-		read -r input
+		read -r input </dev/tty
 
 		if [ -n "$input" ]; then
 			if [ -z "$validation_func" ] || $validation_func "$input"; then
@@ -242,7 +242,7 @@ test_ssh_connection() {
 		print_info "Visit: https://github.com/settings/ssh/new"
 		echo
 		echo -n -e "${PURPLE}Have you added your SSH public key to GitHub? (y/N): ${NC}"
-		read -r ssh_configured
+		read -r ssh_configured </dev/tty
 		if [[ ! $ssh_configured =~ ^[Yy]$ ]]; then
 			print_info "Please add your SSH public key to GitHub and run this script again"
 			print_info "Your public key content:"
@@ -252,7 +252,7 @@ test_ssh_connection() {
 			fi
 			echo
 			echo -n -e "${PURPLE}Press Enter when you've added the key to GitHub...${NC}"
-			read -r
+			read -r </dev/tty
 		fi
 	fi
 }
@@ -268,7 +268,7 @@ setup_ssh_keys() {
 	print_info "2. Generate new SSH keys"
 	echo
 	echo -n -e "${PURPLE}Do you have existing SSH keys you want to copy? (y/N): ${NC}"
-	read -r has_existing_keys
+	read -r has_existing_keys </dev/tty
 	
 	if [[ $has_existing_keys =~ ^[Yy]$ ]]; then
 		print_info "Please copy your SSH key files to ~/.ssh/ directory:"
@@ -280,13 +280,13 @@ setup_ssh_keys() {
 		print_info "chmod 644 ~/.ssh/id_rsa.pub"
 		echo
 		echo -n -e "${PURPLE}Press Enter when you've copied your SSH keys...${NC}"
-		read -r
+		read -r </dev/tty
 		
 		# Re-check after user copies keys
 		check_ssh_keys
 	else
 		echo -n -e "${PURPLE}Enter your email address for the SSH key: ${NC}"
-		read -r email
+		read -r email </dev/tty
 		
 		print_info "Generating new RSA 4096-bit SSH key..."
 		ssh-keygen -t rsa -b 4096 -C "$email" -f "$HOME/.ssh/id_rsa" -N ""
@@ -306,7 +306,7 @@ setup_ssh_keys() {
 		print_info "5. Click 'Add SSH key'"
 		echo
 		echo -n -e "${PURPLE}Press Enter when you've added the key to GitHub...${NC}"
-		read -r
+		read -r </dev/tty
 	fi
 }
 
@@ -349,7 +349,7 @@ main() {
 
 	# Confirm before starting
 	echo -n -e "${PURPLE}Do you want to continue? (y/N): ${NC}"
-	read -r confirm
+	read -r confirm </dev/tty
 	if [[ ! $confirm =~ ^[Yy]$ ]]; then
 		print_info "Setup cancelled by user."
 		exit 0
@@ -480,7 +480,7 @@ main() {
 	if [ -d "$REPO_NAME" ]; then
 		print_warning "Directory $REPO_NAME already exists"
 		echo -n -e "${PURPLE}Do you want to remove it and clone fresh? (y/N): ${NC}"
-		read -r remove_existing
+		read -r remove_existing </dev/tty
 		if [[ $remove_existing =~ ^[Yy]$ ]]; then
 			rm -rf "$REPO_NAME"
 			print_info "Removed existing $REPO_NAME directory"

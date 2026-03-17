@@ -30,27 +30,33 @@ echo "🚀 Bootstrapping your macOS development environment..."
 if ! command -v brew >/dev/null 2>&1; then
 	echo "🍺 Homebrew not found. Installing Homebrew..."
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	# Ensure Homebrew is in the PATH for the current session.
-	if [ -d "/opt/homebrew/bin" ]; then
-		eval "$(/opt/homebrew/bin/brew shellenv)"
-	else
-		eval "$(/usr/local/bin/brew shellenv)"
-	fi
 else
 	echo "🍺 Homebrew is already installed."
+fi
+
+# Ensure Homebrew is in PATH for the current session (needed on Apple Silicon)
+if [ -d "/opt/homebrew/bin" ]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+	eval "$(/usr/local/bin/brew shellenv)"
 fi
 
 echo "📦 Updating Homebrew..."
 brew update
 
-echo "Stowing dotfiles..."
-make restow
+# Install stow first since we need it before brew-bundle runs
+if ! command -v stow >/dev/null 2>&1; then
+	echo "📦 Installing GNU Stow..."
+	brew install stow
+fi
 
-echo "Stowing completed..."
-
-echo "📦 Upgrading Homebrew packages..."
+echo "📦 Installing Homebrew packages..."
 make brew-bundle
 echo "✅ Updated Homebrew packages successfully."
+
+echo "🔗 Stowing dotfiles..."
+make restow
+echo "✅ Stowing completed."
 
 echo "📦 Syncing ZSH Plugins..."
 make zsh-plugins

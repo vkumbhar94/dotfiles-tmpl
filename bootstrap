@@ -50,13 +50,13 @@ if ! command -v stow >/dev/null 2>&1; then
 	brew install stow
 fi
 
-echo "📦 Installing Homebrew packages..."
-make brew-bundle
-echo "✅ Updated Homebrew packages successfully."
-
 echo "🔗 Stowing dotfiles..."
 make restow
 echo "✅ Stowing completed."
+
+echo "📦 Installing Homebrew packages..."
+make brew-bundle
+echo "✅ Updated Homebrew packages successfully."
 
 echo "📦 Syncing ZSH Plugins..."
 make zsh-plugins
